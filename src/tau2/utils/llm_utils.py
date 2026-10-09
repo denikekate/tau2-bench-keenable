@@ -379,6 +379,13 @@ def generate(
     if kwargs.get("num_retries") is None:
         kwargs["num_retries"] = DEFAULT_MAX_RETRIES
 
+    # Claude 5.x models reject the `temperature` parameter ("deprecated for
+    # this model"); tau2's default LLM args always include it, so drop it.
+    if "temperature" in kwargs and (
+        model.startswith("anthropic/") or model.startswith("claude-")
+    ):
+        kwargs = {k: v for k, v in kwargs.items() if k != "temperature"}
+
     # Vertex AI Gemini 3 models require VERTEXAI_LOCATION="global"
     if model.startswith("vertex_ai/gemini-3") and not os.environ.get(
         "VERTEXAI_LOCATION"

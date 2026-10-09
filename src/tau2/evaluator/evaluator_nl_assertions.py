@@ -124,7 +124,12 @@ class NLAssertionsEvaluator(EvaluatorBase[Message]):
             call_name="nl_assertions_eval",
             **DEFAULT_LLM_NL_ASSERTIONS_ARGS,
         )
-        result_data = json.loads(assistant_message.content)
+        content = assistant_message.content.strip()
+        if content.startswith("```"):
+            # Strip a Markdown code fence some models wrap JSON in.
+            content = content.split("\n", 1)[1] if "\n" in content else content
+            content = content.rsplit("```", 1)[0].strip()
+        result_data = json.loads(content)
         return [
             NLAssertionCheck(
                 nl_assertion=result["expectedOutcome"],

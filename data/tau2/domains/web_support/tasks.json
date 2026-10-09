@@ -1,0 +1,525 @@
+[
+  {
+    "id": "ws_001_ryanair_small_bag",
+    "description": {
+      "purpose": "Customer asks: How big can my free small bag be on Ryanair? The one that goes under the seat. Expected: Ryanair's free small personal bag may be up to 40 x 30 x 20 cm and must fit under the seat in front of you.",
+      "relevant_policies": "Source: Ryanair Help Centre - Bag Policies (https://help.ryanair.com/hc/en-gb/sections/12489178346129-Bag-Policies)",
+      "notes": "split=changed; verified_on=2026-10-09; stability=volatile; confidence=high; previous_value=40 x 25 x 20 cm until 4 Sept 2025"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Priya, flying Ryanair from Stansted to Dublin next week with just a backpack.\n\nYour question: How big can my free small bag be on Ryanair? The one that goes under the seat.\n\nDetails you only share if the agent asks: Flying from London Stansted to Dublin; you have not paid for priority or any extra bag.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the maximum dimensions of the free under-seat bag, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [],
+      "nl_assertions": [
+        "The agent told the customer that Ryanair's free small personal bag may be up to 40 x 30 x 20 cm (the current size, not the older 40 x 25 x 20 or 40 x 20 x 25)."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_002_uk_passport_renew_online",
+    "description": {
+      "purpose": "Customer asks: How much does it cost to renew my passport if I do it online? Expected: Renewing a standard 34-page adult UK passport online costs £102 (£115.50 by paper form).",
+      "relevant_policies": "Source: Passport fees - GOV.UK (https://www.gov.uk/passport-fees)",
+      "notes": "split=changed; verified_on=2026-10-09; stability=annual_change:April; confidence=high; previous_value=£94.50 online until 8 April 2026"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Tom, 41, whose adult UK passport expires in March and who wants to renew it online.\n\nYour question: How much does it cost to renew my passport if I do it online?\n\nDetails you only share if the agent asks: Adult standard 34-page passport; applying online, not by paper form; standard service, not fast track.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the online renewal fee, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "102"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that renewing an adult UK passport online costs £102 (the fee since April 2026, not the older £94.50 or £88.50)."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_003_delta_first_bag_fee",
+    "description": {
+      "purpose": "Customer asks: What will Delta charge me for my first checked bag? Expected: Delta charges $45 each way for the first standard checked bag on US domestic Main Cabin tickets bought on or after 8 April 2026 (no status, no Delta Amex).",
+      "relevant_policies": "Source: Delta Air Lines - Baggage & Travel Fees (https://www.delta.com/us/en/baggage/overview)",
+      "notes": "split=changed; verified_on=2026-10-09; stability=volatile; confidence=high; previous_value=$35 for tickets purchased before 8 April 2026"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Marcus, booking a Delta Main Cabin flight from Atlanta to Denver today.\n\nYour question: What will Delta charge me for my first checked bag?\n\nDetails you only share if the agent asks: US domestic flight, Main Cabin fare, no Delta status and no Delta credit card; buying the ticket today.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the first checked bag fee, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "45"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that Delta's first checked bag fee on a domestic Main Cabin ticket bought now is $45 each way (the fee since April 2026, not the older $35)."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_004_fscs_limit",
+    "description": {
+      "purpose": "Customer asks: How much of my money is protected by the FSCS if the bank goes under? Expected: The FSCS deposit protection limit is £120000 per eligible person per authorised firm, in force since 1 December 2025.",
+      "relevant_policies": "Source: Deposit protection limit - FSCS (https://www.fscs.org.uk/what-we-cover/banks-building-societies-credit-unions/deposit-limit/)",
+      "notes": "split=changed; verified_on=2026-10-09; stability=evergreen; confidence=high; previous_value=£85000 until 30 Nov 2025"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Helen, 58, who has just received an inheritance and wants to know how much is safe to keep in one UK bank.\n\nYour question: How much of my money is protected by the FSCS if the bank goes under?\n\nDetails you only share if the agent asks: Sole account at a UK-authorised bank; not a joint account.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the FSCS protection limit per person per bank, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "120000"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that the FSCS deposit protection limit is £120,000 per person per authorised firm (the limit since 1 December 2025, not the old £85,000)."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_005_wise_atm",
+    "description": {
+      "purpose": "Customer asks: How much can I take out of cash machines each month with my Wise card without a fee, and what do they charge after that? Expected: UK Wise card: free ATM withdrawals up to £250 per month in total, then 2.69% on the amount above £250.",
+      "relevant_policies": "Source: Wise Card Fees - Wise UK (https://wise.com/gb/pricing/card-fees)",
+      "notes": "split=changed; verified_on=2026-10-09; stability=volatile; confidence=high; previous_value=Until ~March 2026: 2 free withdrawals up to £200/month, then 1.75% plus 50p per withdrawal"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Lena, a UK Wise card holder heading to Portugal for two weeks.\n\nYour question: How much can I take out of cash machines each month with my Wise card without a fee, and what do they charge after that?\n\nDetails you only share if the agent asks: UK-issued Wise personal card; you want the standard monthly allowance, not a business account.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the free monthly ATM allowance and the fee above it, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "250",
+        "2.69"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that the UK Wise card allows free ATM withdrawals up to £250 per month, and that above that a 2.69% fee applies (current terms, not the older £200 / 1.75% plus 50p terms)."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_006_costco_uk_membership",
+    "description": {
+      "purpose": "Customer asks: How much is a Costco membership for an individual in the UK? Expected: Costco UK Gold Star (individual) membership is £42 per year including VAT (£35 ex VAT).",
+      "relevant_policies": "Source: Membership - Costco UK (https://www.costco.co.uk/membership)",
+      "notes": "split=changed; verified_on=2026-10-09; stability=volatile; confidence=high; previous_value=£28 ex VAT (£33.60 inc VAT) until 1 March 2025"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Daniel, who wants to join Costco in the UK as an ordinary individual member.\n\nYour question: How much is a Costco membership for an individual in the UK?\n\nDetails you only share if the agent asks: Individual (Gold Star) membership, not a business/trade membership and not Executive; you want the price including VAT.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the annual individual membership fee, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "42"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that Costco UK individual (Gold Star) membership costs £42 per year including VAT (or £35 excluding VAT), the current price rather than the older £33.60 / £28."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_007_royal_mail_first_class",
+    "description": {
+      "purpose": "Customer asks: How much is a first class stamp at the moment? And a second class one? Expected: A Royal Mail standard-letter 1st Class stamp costs £1.80 and a 2nd Class stamp costs 91p, since 7 April 2026.",
+      "relevant_policies": "Source: Royal Mail - Stamps (https://www.royalmail.com/stamps)",
+      "notes": "split=changed; verified_on=2026-10-09; stability=annual_change:April; confidence=high; previous_value=£1.70 / 87p from April 2025"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Margaret, 72, posting birthday cards and unsure what stamps cost now.\n\nYour question: How much is a first class stamp at the moment? And a second class one?\n\nDetails you only share if the agent asks: Standard letters, posted within the UK.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the current 1st and 2nd class stamp prices, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "1.80",
+        "91"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that a Royal Mail 1st Class standard letter stamp costs £1.80 and a 2nd Class stamp costs 91p (prices since April 2026, not the older £1.70 / 87p)."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_008_london_congestion_charge",
+    "description": {
+      "purpose": "Customer asks: How much is the Congestion Charge per day now? I'll pay in advance. Expected: The Congestion Charge is £18 per day (advance or same day); the EV exemption ended 25 Dec 2025, replaced from 2 Jan 2026 by a 25% discount (£13.50) for EVs on Auto Pay.",
+      "relevant_policies": "Source: TfL notice: Changes to the Congestion Charge scheme (Feb 2026) (https://content.tfl.gov.uk/02-26-tph-notice-changes-to-the-congestion-charge-scheme.pdf)",
+      "notes": "split=changed; verified_on=2026-10-09; stability=volatile; confidence=medium; previous_value=£15 per day with 100% EV discount, until 2 Jan 2026"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Ahmed, driving a petrol car into central London on a weekday for the first time this year.\n\nYour question: How much is the Congestion Charge per day now? I'll pay in advance.\n\nDetails you only share if the agent asks: Petrol car, not electric; paying in advance or on the day, not late; weekday daytime.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the daily Congestion Charge, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "18"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that the London Congestion Charge is £18 per day when paid in advance or on the day (the rate since 2 January 2026, not the older £15)."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_009_tv_licence",
+    "description": {
+      "purpose": "Customer asks: How much is a TV licence for a year? Expected: A colour TV licence costs £180 per year since 1 April 2026.",
+      "relevant_policies": "Source: TV Licensing - How much does a TV Licence cost? (https://www.tvlicensing.co.uk/faqs/FAQ19)",
+      "notes": "split=changed; verified_on=2026-10-09; stability=annual_change:April; confidence=high; previous_value=£174.50 from April 2025"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Sophie, who has just moved into her first flat and needs a TV licence.\n\nYour question: How much is a TV licence for a year?\n\nDetails you only share if the agent asks: Standard colour licence, paying for the full year, no concessions.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the annual TV licence fee, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "180"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that a colour TV licence costs £180 per year (the fee since 1 April 2026, not the older £174.50 or £169.50)."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_010_netflix_uk_standard",
+    "description": {
+      "purpose": "Customer asks: What does Netflix Standard cost a month now, and what's the cheaper plan with adverts? Expected: Netflix UK Standard costs £13.99 per month and Standard with adverts £7.99 per month (since September 2026).",
+      "relevant_policies": "Source: Plans and Pricing - Netflix Help Centre (UK) (https://help.netflix.com/en/node/24926/gb)",
+      "notes": "split=changed; verified_on=2026-10-09; stability=volatile; confidence=high; previous_value=Standard £12.99, with adverts £5.99 (Feb 2025 to Sept 2026)"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Jake, comparing streaming subscriptions in the UK.\n\nYour question: What does Netflix Standard cost a month now, and what's the cheaper plan with adverts?\n\nDetails you only share if the agent asks: UK account; you want the Standard plan and the Standard with adverts plan, not Premium.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the monthly price of Standard and of Standard with adverts, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "13.99",
+        "7.99"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that Netflix UK Standard costs £13.99 per month and Standard with adverts costs £7.99 per month (prices since September 2026, not the older £12.99 / £5.99)."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_011_easyjet_large_cabin",
+    "description": {
+      "purpose": "Customer asks: What's the biggest cabin bag I can take on easyJet, and is it included in a normal ticket? Expected: easyJet's large cabin bag can be up to 56 x 45 x 25 cm (15 kg max) and is a paid add-on (free only with easyJet Plus or Inclusive Plus); every passenger gets one free under-seat bag of 45 x 36 x 20 cm.",
+      "relevant_policies": "Source: easyJet - Cabin bag and hold luggage (https://www.easyjet.com/en/help/baggage/cabin-bag-and-hold-luggage)",
+      "notes": "split=evergreen; verified_on=2026-10-09; stability=evergreen; confidence=high; previous_value=None"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Chloe, flying easyJet from Gatwick to Barcelona with a wheelie suitcase.\n\nYour question: What's the biggest cabin bag I can take on easyJet, and is it included in a normal ticket?\n\nDetails you only share if the agent asks: Standard fare, no easyJet Plus membership, not an Up Front or Extra Legroom seat.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the large cabin bag maximum dimensions and whether it is included, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [],
+      "nl_assertions": [
+        "The agent told the customer that easyJet's large cabin bag may be up to 56 x 45 x 25 cm and that it is a paid extra on a standard fare (only the small under-seat bag is free)."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_012_ba_checked_weight",
+    "description": {
+      "purpose": "Customer asks: What's the maximum weight for my checked bag in economy on BA? Expected: British Airways allows a maximum of 23 kg per checked bag in economy.",
+      "relevant_policies": "Source: British Airways - Checked baggage allowances (https://www.britishairways.com/en-no/information/baggage-essentials/checked-baggage-allowances)",
+      "notes": "split=evergreen; verified_on=2026-10-09; stability=evergreen; confidence=high; previous_value=None"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Rohan, flying British Airways economy from Heathrow to Mumbai with one suitcase.\n\nYour question: What's the maximum weight for my checked bag in economy on BA?\n\nDetails you only share if the agent asks: Economy (World Traveller) fare that includes a checked bag; no frequent flyer status.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the maximum weight per checked bag, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "23"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that British Airways allows up to 23 kg per checked bag in economy."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_013_tsa_liquids",
+    "description": {
+      "purpose": "Customer asks: How big can my liquid containers be in my carry-on through US security? Expected: TSA's 3-1-1 rule limits each liquid container in carry-on to 3.4 oz (100 ml), all fitting in one quart-size bag.",
+      "relevant_policies": "Source: TSA - Liquids, aerosols and gels rule (https://www.tsa.gov/travel/security-screening/liquids-aerosols-gels-rule)",
+      "notes": "split=evergreen; verified_on=2026-10-09; stability=evergreen; confidence=high; previous_value=None"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Emily, flying from Chicago O'Hare with carry-on only and a bag of toiletries.\n\nYour question: How big can my liquid containers be in my carry-on through US security?\n\nDetails you only share if the agent asks: Domestic US flight; ordinary toiletries, nothing medical.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the maximum container size for liquids, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "3.4"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that each liquid container in a US carry-on must be 3.4 oz (100 ml) or less under the TSA 3-1-1 rule."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_014_costco_us_gold_star",
+    "description": {
+      "purpose": "Customer asks: How much is the basic Costco membership in the US per year? Expected: Costco US Gold Star membership is $65 per year.",
+      "relevant_policies": "Source: Join Costco (https://www.costco.com/join-costco.html)",
+      "notes": "split=evergreen; verified_on=2026-10-09; stability=evergreen; confidence=high; previous_value=$60 until 1 Sept 2024"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Carlos, in Texas, thinking about joining Costco.\n\nYour question: How much is the basic Costco membership in the US per year?\n\nDetails you only share if the agent asks: Gold Star (basic individual) membership, not Executive and not Business.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the annual Gold Star membership fee, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "65"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that a Costco US Gold Star membership costs $65 per year."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_015_section75",
+    "description": {
+      "purpose": "Customer asks: Does Section 75 cover me, and what's the price range it applies to? Expected: Section 75 covers a single item with a cash price over £100 and up to £30000 paid wholly or partly on a UK credit card.",
+      "relevant_policies": "Source: Consumer Credit Act 1974 s.75 (https://www.legislation.gov.uk/ukpga/1974/39/section/75)",
+      "notes": "split=evergreen; verified_on=2026-10-09; stability=evergreen; confidence=high; previous_value=None"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Grace, who paid a £2,000 deposit for a kitchen on her credit card and the company has gone bust.\n\nYour question: Does Section 75 cover me, and what's the price range it applies to?\n\nDetails you only share if the agent asks: UK credit card; the kitchen's total price was £9,000 and you paid £2,000 of it on the card.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the minimum and maximum item price covered by Section 75, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "100",
+        "30000"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that Section 75 applies to items costing more than £100 and up to £30,000 (both bounds stated)."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_016_paypal_buyer_protection_window",
+    "description": {
+      "purpose": "Customer asks: How long have I got to open a dispute with PayPal for an item that never arrived? Expected: PayPal UK: open an Item Not Received dispute within 180 days of payment.",
+      "relevant_policies": "Source: Dispute filing timeframes - PayPal UK Help (https://www.paypal.com/uk/cshelp/article/dispute-filing-timeframes-help1173)",
+      "notes": "split=evergreen; verified_on=2026-10-09; stability=evergreen; confidence=high; previous_value=None"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Ben, who paid for a guitar with PayPal six weeks ago and it has never arrived.\n\nYour question: How long have I got to open a dispute with PayPal for an item that never arrived?\n\nDetails you only share if the agent asks: UK PayPal account; paid six weeks ago; the seller has stopped replying.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the number of days to open an item-not-received dispute, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "180"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that a PayPal item-not-received dispute must be opened within 180 days of the payment, so six weeks is well within the window."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_017_monzo_atm_abroad",
+    "description": {
+      "purpose": "Customer asks: How much cash can I withdraw abroad on Monzo before they charge me, and what's the fee after that? Expected: On a free Monzo personal account, outside the UK/EEA you can withdraw £200 fee-free every 30 days and then pay 3%.",
+      "relevant_policies": "Source: Understanding fees - Travelling with Monzo (https://monzo.com/help/travelling/fees)",
+      "notes": "split=evergreen; verified_on=2026-10-09; stability=volatile; confidence=high; previous_value=None"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Aisha, with a free Monzo account, travelling to Morocco for ten days.\n\nYour question: How much cash can I withdraw abroad on Monzo before they charge me, and what's the fee after that?\n\nDetails you only share if the agent asks: Free personal Monzo account (not Plus/Premium); Morocco is outside the EEA; Monzo is not your main bank account.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the fee-free withdrawal allowance and the fee above it, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "200",
+        "3%"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that on a free Monzo account they can withdraw £200 fee-free every 30 days outside the UK/EEA, after which a 3% fee applies."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_018_nhs_prescription_england",
+    "description": {
+      "purpose": "Customer asks: How much does an NHS prescription cost per item in England, and how much is the 12-month prepayment certificate? Expected: An NHS prescription costs £9.90 per item in England and a 12-month prepayment certificate costs £114.50 (frozen for 2026/27).",
+      "relevant_policies": "Source: Prescription prepayment certificate - NHS (https://www.nhs.uk/nhs-services/prescriptions-and-pharmacies/save-money-with-a-prescription-prepayment-certificate-ppc/)",
+      "notes": "split=evergreen; verified_on=2026-10-09; stability=annual_change:April; confidence=high; previous_value=Unchanged since 1 May 2024"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Oliver, in Manchester, newly prescribed two monthly medicines.\n\nYour question: How much does an NHS prescription cost per item in England, and how much is the 12-month prepayment certificate?\n\nDetails you only share if the agent asks: You live in England, are 35, and have no exemption.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the per-item charge and the 12-month certificate price, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "9.90",
+        "114.50"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that an NHS prescription in England costs £9.90 per item and a 12-month prepayment certificate costs £114.50."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_019_ikea_uk_returns",
+    "description": {
+      "purpose": "Customer asks: How long do I have to return something to IKEA? Expected: IKEA UK allows returns within 365 days for unopened and for opened/tested products (used items excluded).",
+      "relevant_policies": "Source: Return policy - IKEA UK (https://www.ikea.com/gb/en/customer-service/returns-claims/return-policy/)",
+      "notes": "split=evergreen; verified_on=2026-10-09; stability=evergreen; confidence=high; previous_value=None"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Natalie, who bought a bookcase from IKEA in the UK four months ago and never opened the box.\n\nYour question: How long do I have to return something to IKEA?\n\nDetails you only share if the agent asks: Bought in store in the UK; still unopened; you have the receipt.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the returns window in days, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "365"
+      ],
+      "nl_assertions": [
+        "The agent told the customer that IKEA UK accepts returns within 365 days, so a four-month-old unopened purchase can still be returned."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  },
+  {
+    "id": "ws_020_ofcom_text_to_switch",
+    "description": {
+      "purpose": "Customer asks: How do I get the code to move my number to a new network, and how long is it valid for? Expected: Text PAC to 65075 to get your PAC code; it is valid for 30 days.",
+      "relevant_policies": "Source: Switching mobile phone provider - Ofcom (https://www.ofcom.org.uk/phones-and-broadband/switching-provider/switching-mobile-phone-provider)",
+      "notes": "split=evergreen; verified_on=2026-10-09; stability=evergreen; confidence=high; previous_value=None"
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": "You are playing the role of a customer calling AnswerLine, a helpdesk that answers practical questions about companies and public services. You are on a voice call, so keep messages short and natural.\n\nYour character: Sam, who wants to move their mobile number from one UK network to another.\n\nYour question: How do I get the code to move my number to a new network, and how long is it valid for?\n\nDetails you only share if the agent asks: UK pay-monthly mobile; you want to keep your number.\n\nYou do not know the answer yourself and must not suggest or guess any figure. Once the agent gives you a specific figure for the number to text and the validity period of the PAC, thank them and end the conversation by generating the token ###STOP###. If the agent gives only vague guidance without a specific figure, ask once for the exact number; if they still do not give one, end the conversation with ###STOP###. Do not ask any other questions. Never respond as the agent; you are the customer."
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [],
+      "communicate_info": [
+        "65075",
+        "30"
+      ],
+      "nl_assertions": [
+        "The agent told the customer to text PAC to 65075 to get their PAC code and that the code is valid for 30 days."
+      ],
+      "reward_basis": [
+        "NL_ASSERTION"
+      ]
+    },
+    "user_tools": []
+  }
+]

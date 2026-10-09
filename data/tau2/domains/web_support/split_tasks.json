@@ -1,0 +1,48 @@
+{
+  "changed": [
+    "ws_001_ryanair_small_bag",
+    "ws_002_uk_passport_renew_online",
+    "ws_003_delta_first_bag_fee",
+    "ws_004_fscs_limit",
+    "ws_005_wise_atm",
+    "ws_006_costco_uk_membership",
+    "ws_007_royal_mail_first_class",
+    "ws_008_london_congestion_charge",
+    "ws_009_tv_licence",
+    "ws_010_netflix_uk_standard"
+  ],
+  "evergreen": [
+    "ws_011_easyjet_large_cabin",
+    "ws_012_ba_checked_weight",
+    "ws_013_tsa_liquids",
+    "ws_014_costco_us_gold_star",
+    "ws_015_section75",
+    "ws_016_paypal_buyer_protection_window",
+    "ws_017_monzo_atm_abroad",
+    "ws_018_nhs_prescription_england",
+    "ws_019_ikea_uk_returns",
+    "ws_020_ofcom_text_to_switch"
+  ],
+  "base": [
+    "ws_001_ryanair_small_bag",
+    "ws_002_uk_passport_renew_online",
+    "ws_003_delta_first_bag_fee",
+    "ws_004_fscs_limit",
+    "ws_005_wise_atm",
+    "ws_006_costco_uk_membership",
+    "ws_007_royal_mail_first_class",
+    "ws_008_london_congestion_charge",
+    "ws_009_tv_licence",
+    "ws_010_netflix_uk_standard",
+    "ws_011_easyjet_large_cabin",
+    "ws_012_ba_checked_weight",
+    "ws_013_tsa_liquids",
+    "ws_014_costco_us_gold_star",
+    "ws_015_section75",
+    "ws_016_paypal_buyer_protection_window",
+    "ws_017_monzo_atm_abroad",
+    "ws_018_nhs_prescription_england",
+    "ws_019_ikea_uk_returns",
+    "ws_020_ofcom_text_to_switch"
+  ]
+}

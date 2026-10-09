@@ -37,6 +37,25 @@ from tau2.domains.retail.environment import get_tasks as retail_domain_get_tasks
 from tau2.domains.retail.environment import (
     get_tasks_split as retail_domain_get_tasks_split,
 )
+from tau2.domains.web_support.environment import (
+    get_environment_exa as web_support_get_environment_exa,
+)
+from tau2.domains.web_support.environment import (
+    get_environment_keenable as web_support_get_environment_keenable,
+)
+from tau2.domains.web_support.environment import (
+    get_environment_mock as web_support_get_environment_mock,
+)
+from tau2.domains.web_support.environment import (
+    get_environment_none as web_support_get_environment_none,
+)
+from tau2.domains.web_support.environment import (
+    get_environment_tavily as web_support_get_environment_tavily,
+)
+from tau2.domains.web_support.environment import get_tasks as web_support_get_tasks
+from tau2.domains.web_support.environment import (
+    get_tasks_split as web_support_get_tasks_split,
+)
 from tau2.domains.telecom.environment import (
     get_environment_manual_policy as telecom_domain_get_environment_manual_policy,
 )
@@ -346,6 +365,21 @@ try:
 
     registry.register_domain(knowledge_domain_get_environment, "banking_knowledge")
     registry.register_tasks(knowledge_domain_get_tasks, "banking_knowledge")
+
+    # web_support: live web search benchmark, one domain name per search backend
+    for _prov, _get_env in [
+        ("keenable", web_support_get_environment_keenable),
+        ("tavily", web_support_get_environment_tavily),
+        ("exa", web_support_get_environment_exa),
+        ("mock", web_support_get_environment_mock),
+        ("none", web_support_get_environment_none),
+    ]:
+        registry.register_domain(_get_env, f"web_support_{_prov}")
+        registry.register_tasks(
+            web_support_get_tasks,
+            f"web_support_{_prov}",
+            get_task_splits=web_support_get_tasks_split,
+        )
 
     logger.debug(
         f"Default components registered successfully. Registry info: {json.dumps(registry.get_info().model_dump(), indent=2)}"
